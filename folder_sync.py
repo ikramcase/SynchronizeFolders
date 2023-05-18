@@ -45,9 +45,10 @@ def synchronize_folders(source_folder, replica_folder, log_file):
 
 def main():
     parser = argparse.ArgumentParser(description='Folder Synchronization')
-    parser.add_argument('source', help='/Users/ikramkhan/Python/source')
-    parser.add_argument('replica', help='/Users/ikramkhan/Python/replica')
-    parser.add_argument('log_file', help='/Users/ikramkhan/Python/log_file.log')
+    parser.add_argument('source', help='./source')
+    parser.add_argument('replica', help='./replica')
+    parser.add_argument('log_file', help='./log_file.log')
+
     args = parser.parse_args()
 
     synchronize_folders(args.source, args.replica, args.log_file)
@@ -55,3 +56,9 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# write this command to run the project in the terminal
+
+# python3 folder_sync.py ./source ./replica ./log_file.log
+
